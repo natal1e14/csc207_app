@@ -1,0 +1,439 @@
+###############
+Oct 26 10:56 AM
+
+Created this changelog file - Nat
+###############
+Oct 26 10:58 AM
+Created Game2Manager Activity and made it a subclass of LevelManager
+Added a default constructor to LevelManager - Nat
+###############
+Oct 26 12:46 PM
+Added no arg constructor to Game2Manager - Nat
+###############
+Oct 26 12:47 PM
+Changed background image of game + removed default views (Dummy Background + Dummy Button)
+Changed game layout from FrameLayout to RelativeLayout - Nat
+################
+Oct 26 12:56 PM
+Created Asteroid class
+################
+Oct 26 1:01 PM
+Created AsteroidFactory class
+################
+Oct 26 2:01 PM
+Deleted and Remade Game2Manager in the same way as before because it stopped working
+and I couldn't figure out why - Nat
+
+#################
+Oct 26 3:52 PM
+
+Commented out code that controls showing/hiding top bar
+Added spaceship + implement onTap method to control moving the ship upwards
+when the screen is clicked
+- Nat
+
+#################
+Oct 27 4:57 PM
+
+So we are restarting everything! Deleted Game2Manager and replaced it
+with the empty activity, Game2Activity.
+
+
+#################
+Oct 27 5:14 PM
+
+Created GameView and MainThread Classes
+
+#################
+Oct 27 5:25 PM
+
+Created Spaceship class
+
+#################
+Oct 27 5:28 PM
+
+Created Spaceship object in GameView class, added to GameView.update
+and GameView.draw
+
+#################
+Oct 27 5:32 PM
+
+Changed size of spaceship image and direction of movement. Also hid bottom bar (where the home
+button is) for true full screen.
+#################
+Oct 27 6:28PM
+
+Added background image
+
+#################
+Oct 27 9:01 pm
+
+Added Rect objects to spaceship and asteroid objects for collision detection later on
+###################
+Oct 27 10:54 PM
+
+Modified y velocity and start location of the spaceship.
+Added response to tapping of screen.
+
+###################
+Oct 28 3:20 PM
+
+Added asteroid graphic to screen by adding image to Asteroid class and calling
+AsteroidFactory.create() in GameView.
+
+###################
+Oct 28 3:58 PM
+
+Modified movement and jump of spaceship
+
+#####################
+Oct 28 4:10 PM
+
+Modified locations of the asteroids
+
+###################
+Oct 28 4:14
+
+Modified ship movement to not get off screen
+
+###################
+Oct 28 7:03
+
+If ship falls off screen, gamover
+
+###################
+Oct 28 7:35
+
+Collision detection between ship and asteroids
+
+####################
+Oct 29 3:27 PM
+
+Created AsteroidManager class and delegated some of the asteroid-related tasks from GameView
+to it (like asteroid.update() and asteroid.draw())
+
+#######################
+Oct 29 3:45 PM
+
+Made asteroids regenerate when they go off the screen, so that we have an
+endless asteroid belt.
+
+#######################
+Oct 29 4:20 PM
+
+Added functionality to randomly generate asteroids
+
+#######################
+Oct 29 11:12 PM
+
+Added timing functionality where the game ends when 60 seconds pass
+
+#######################
+Oct 30 2:22 AM
+
+Added new instructions activity screen
+
+########################
+Oct 30 10:05 AM
+
+Added scoring -- added getScore and setScore methods in Spaceship, added methods to track when
+asteroids go offScreen to add a point and added score to the screen.
+
+########################
+Oct 30 8:47 PM
+Fixed some text issues (typos + spacing) in GameView and Instructions2Activity
+
+#######################
+Oct 31 1:05 AM
+
+Made timer object and some cleanup
+
+#######################
+Oct 31 12:46PM
+
+Slightly modified Score text.
+Changed Spaceship.gameIsOver to return true/false.
+
+########################
+Oct 31 1:22 PM
+
+(Work in progress) trying to create Game Over screen.
+Got game to stop when game over. Created Game2OverActivity.
+########################
+Oct 31 3:34 PM
+
+Edited the UI of the Game2Over Activity
+
+#########################
+Oct 31 3:38PM
+
+Made Game Over screen fullscreen.
+#########################
+Oct 31 3:40 PM
+
+Added constraints to game over screen views
+
+#########################
+Oct 31 4:59 PM
+
+Moved files into package specific to game2 in prep for merge
+
+#########################
+Oct 31 8:07 PM - Yichen
+
+Added score to game over screen.
+
+#########################
+Oct 31 10:13 PM
+
+Implemented game over screen
+
+#########################
+Oct 31 10:23 PM
+
+Cleaned up some code
+
+#########################
+Nov 1 12:21 PM
+
+Changed spaceship image and updated score calculation
+
+########################
+Nov 1 1:41 PM
+
+Added a screen for passing game 2 and changing sign up to sign in in the log in menu. Also
+changed spaceship image
+
+########################
+Nov 1 9:04 PM
+
+Added lives functionality to game2
+
+##########################
+Nov 1 10:41 PM
+
+Added option to choose your spaceship for game 2.
+###########################
+Nov 1 12:08 AM
+
+Cleaned up code (added comments, deleted unused variables/methods), modified encapsulation
+states of variables and methods.
+
+
+########################################### PHASE 2 ################################################
+
+###########################
+Nov 24 3:33 PM
+Added constants to spaceship and gameview
+
+###########################
+Nov 24 3:56 PM
+
+Created a Builder class for GameView, and moved the creation of objects from the GameView
+constructor to GameView.construct(), to be handled by the Builder class.
+
+###########################
+Nov 24 5:41 PM
+
+Modified Builder class for GameView so that it builds everything for Builder in Game2Activity
+
+###########################
+Nov 24 6:25 PM
+
+The game now speeds up at intervals of 10 seconds - so different levels.
+
+###########################
+Nov 24 7:08 PM
+
+Fixed an issue causing text not to appear on the screen. Deleted some unused attributes in GameView.
+
+############################
+Nov 25 7:36 PM
+
+Renamed GameView to FlappyView and Builder to FlappyBuilder
+
+############################
+Nov 25 9:28 PM
+
+Made FlappyBuilder implement ViewBuilder. Fixed some bugs in ViewBuilder.
+
+#############################
+Nov 25 10:18 PM
+
+Made GameActivity superclass for the Game Activity classes. Modified Game2Activity to reflect this by
+removing duplicate code and extending the class.
+
+#############################
+Nov 26 1:49 PM
+
+Added new classes:
+
+GameDisplay         -> Handles drawing the game
+GameStatusTracker   -> Handles updating the status of the game (gameOver? gameDone?)
+GameUpdator         -> Handles logic behind game updates
+SpaceObjects        -> Stores objects that are used (in common) by  classes above
+Game2Facade         -> Facade for classes above
+
+##############################
+Nov 27 12:49 AM
+
+Implemented Saved State for Game 2. Created Game2PauseActivity that shows up when you exit
+the game by pressing the home button. Made changes to Game2Activity to allow for passing of
+information between Game2Activity and Game2PauseActivity. Also added many getters and setters
+to Game2Facade, FlappyView, FlappyBuilder, and other classes used in Game2Facade to allow for
+the information passing.
+
+##############################
+Nov 27 1:05 AM
+
+Deleted a reference to a deleted file in AndroidManifest
+
+###############################
+Nov 27 8:50 AM
+
+Made instance variables in FlappyBuilder private.
+
+################################
+Nov 27 8:59 AM
+
+Made instance variables in SpaceObjects private, and added getters for them. Modified code in
+Game2Facade, GameDisplay, GameStatusTracker, GameUpdator accordingly.
+
+#################################
+Nov 27 1:30 PM
+
+Created a FacadeBuilder class to build the entire Game2Facade (including instance attributes).
+Made changes to FlappyBuilder to build Game2Facade using FacadeBuilder instead of just creating a new
+"empty" Facade. Modified Game2Activity, Game2Facade, and FlappyView accordingly
+
+##################################
+Nov 27 1:53 PM
+
+Made paint an instance attribute of timer so that its draw method has the same signature
+as the other things stored in SpaceObjects.
+
+###################################
+Nov 27 1:58 PM
+
+Changed score from being stored in Spaceship to being stored in GameUpdator.
+Made appropriate changes to GameUpdator, GameDisplay
+
+#####################################
+Nov 27 2:29 PM
+
+Made an abstract superclass, Sprites, for Timer, AsteroidManager, and Spaceship. Updated
+GameDisplay accordingly.
+
+#####################################
+Nov 27 3:21 PM
+Seperated lives and score from ship and delegated to gameUpdator and gameStatusTracker
+
+######################################
+Nov 27 11:31 PM
+
+Modified Asteroid creation algorithm to either increase the speed of the asteroid or
+increase the number of asteroids as the game progresses.
+
+######################################
+Nov 28 11:48 PM
+
+Added level display
+
+######################################
+Nov 30 2:09 PM
+
+Modified asteroid generation.
+Made game more difficult by increasing speed + number of asteroids
+in each level.
+
+########################################
+Nov 30 4:31 PM
+
+Updated collision detection between asteroids and the spaceship.
+
+#########################################
+Nov 30 4:55 PM
+
+Made the ship smaller.
+
+#########################################
+Nov 30 9:46 PM
+
+Added artifacts
+
+#########################################
+Dec 1 2:40 AM
+
+Placed different files into packages in a way
+that increases the ability to encapsulate code.
+Updated accessibility modifiers and added
+new getters as necessary.
+
+############################################
+Dec 1 3:40 AM
+
+Modified GameUpdator.collisionUpdate to allow for better encapsulation.
+Cropped artifact image.
+
+#############################################
+Dec 1 10:24 AM
+
+Fixed an issue with the galaxies disappearing.
+
+#############################################
+Dec 1 11:00 AM
+
+Got GameOver screen running.
+
+#############################################
+Dec 1 11:24 AM
+
+Updated GamePass screen.
+
+#############################################
+Dec 1 11:58 AM
+
+Created SpaceObjectsBuilder to build the SpaceObject instance
+variable for the Game2Facade.
+Moved a lot of the responsibilities of FlappyBuilder to FacadeBuilder.
+Changed Game2Activity to pass Facade to FlappyView via a dependency injection.
+
+##############################################
+Dec 1 6:07 PM
+
+Added javadoc + cleaned up code in the artifacts package
+
+#############################################
+Dec 1 6:11PM
+
+Fixed timer with savestate
+
+#############################################
+Dec 1 6:35 PM
+
+Added javadoc + cleaned up code in the starting package
+
+############################################
+Dec 1 6:38 PM
+
+Added javadoc + cleaned up code in the asteroids package
+
+##############################################
+Dec 1 6:44 PM
+
+Added commenting + reformated code in endgame package
+
+#############################################
+Dec 1 7:04 PM
+
+Added javadoc + cleaned up code in the spaceObjects package
+
+#############################################
+Dec 1 7:53 PM
+
+Added javadoc + cleaned up code in the facadeThings package
+
+#############################################
+Dec 1 8:02 PM
+
+Added asteroid speed to saved state, cleaned up code in AsteroidManager

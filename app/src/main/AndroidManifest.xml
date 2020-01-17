@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.game">
+
+    <dist:module dist:instant="true" />
+
+    <application
+        android:name=".Globals"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.game1.activities.Game1PauseActivity"></activity>
+        <activity
+            android:name=".MusicSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:parentActivityName="androidx.appcompat.app.AppCompatActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="androidx.appcompat.app.AppCompatActivity" />
+        </activity>
+        <activity android:name="com.example.game3.Activities.Intro3Activity"></activity>
+        <activity android:name="com.example.game3.Activities.Game3PassActivity" />
+        <activity android:name="com.example.game3.Activities.Game3PauseActivity" />
+        <activity android:name="com.example.game3.Activities.Level2Activity" />
+        <activity android:name="com.example.game3.Activities.Level3Activity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ChooseThemeActivity" />
+        <activity android:name="com.example.game2.starting.Game2PauseActivity" />
+        <activity android:name="com.example.game2.starting.ChooseShipActivity" />
+        <activity android:name=".ShowScoreActivity" />
+        <activity android:name="com.example.game2.endgame.Game2OverActivity" />
+        <activity android:name="com.example.game2.endgame.Game2PassActivity" />
+        <activity android:name="com.example.game2.starting.Game2Activity" />
+        <activity android:name="com.example.game2.starting.Instructions2Activity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".GameListActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.game3.Activities.InstructionActivity" />
+        <activity android:name="com.example.game3.Activities.Game3OverActivity" />
+        <activity android:name="com.example.game3.Activities.Game3Activity" />
+        <activity android:name="com.example.game1.activities.Game1OverActivity" />
+        <activity android:name="com.example.game1.activities.Game1Activity" />
+        <activity android:name="com.example.game1.activities.Instructions1Activity" />
+        <activity android:name="com.example.game3.Activities.Intro2Activity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

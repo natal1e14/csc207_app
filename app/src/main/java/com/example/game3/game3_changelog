@@ -1,0 +1,191 @@
+########################
+Oct 27 - 3:18PM - Yichen
+
+Added Game3Activity, which handles all activities that occur on screen.
+
+Added Game3View, which handles everything that is drawn onto the screen.
+
+Added Game3Thread, which runs in parallel to be able to update graphics on screen.
+
+Added BlackHole, a testing class that represents a potential image file that will be used
+within the game as interactable objects.
+
+Added Game3Manager, which will deal with scoring in the game.
+
+Added Game3_changelog to detail the changes done to the code.
+
+######################
+Oct 27 - 10:44 PM - Rajvi
+
+Added an ArrayList in Game3View to keep track of all objects that will be randomly appearing on the
+screen. (currently only holds a single BlackHole object for testing purposes).
+
+Added a getWidth() and getHeight() method in BlackHole.
+
+In draw method of Game3View, changed the implementation of drawing object on the screen into a for
+loop that loops over the galaxies ArrayList.
+
+Overrode the onTouch method from SurfaceView in Game3View to keep track of MotionEvent instances:
+    - when the screen is tapped and the tap falls on an object, remove the object from galaxies
+
+########################
+Oct 28 - 1:21 PM - Rajvi
+
+Changed BlackHole class' name to Galaxy.
+
+########################
+Oct 28 - 9:38 PM - Yichen
+
+Modified GameView so that the screen is now split into four rectangles, each representing a place
+the player can tap. When a part of the screen is tapped, the corresponding galaxy disappears from
+the screen.
+
+#######################
+Oct 29 - 6:46 PM - Rajvi
+
+Added javadoc for instance variables and methods in Galaxy. Removed unused ImageView import in
+Galaxy.
+
+#######################
+Oct 29 - 7:42 PM - Rajvi
+
+Changed the names of Game3Manager to HyperManager. Changed Game3View to HyperView. Changed
+width in HyperView to screenWidth. Changed height in HyperView to screenHeight.
+
+#######################
+Oct 29 - 8:03 PM - Rajvi
+
+Implemented a rough template of HyperManager, and added an instance of it to the HyperView class.
+
+######################
+Oct 29 - 8:19 PM - Rajvi
+
+Added an instance variable, visible, to Galaxy. true when the galaxy instance can appear on the screen, and
+false when cannot appear on the screen. also added getter and setter methods for the variable.
+
+######################
+Oct 29 - 9:52 PM - Rajvi
+
+Implemented createGalaxies method by moving the code that created the galaxies in view into
+this method. as a consequence, removed the galaxies array from HyperView into HyperManager.
+Also implemented the draw method in HyperManager. Changed the draw method in HyperView accordingly.
+
+#######################
+Oct 29 - 11:46 PM - Rajvi
+
+Changed the onTouch implementation so that it calls the updateGalaxies() method to check if
+the tap is within the bounds of a galaxy. removed the visible attribute of Galaxy because it was
+unnecessary and redundant.
+
+#######################
+Oct 30 - 12:13 AM - Yichen
+
+Added a new instance variable in galaxy that determines its visibility on the display surface.
+
+Added and implemented two methods, checkForDelete(), which randomly generates a number that
+determines whether or not the galaxy should be removed from the display screen (independent of user
+tapping). getVisibilityStatus() returns the boolean representing the visibility status of the
+galaxy. Implemented update() in galaxy to both checkForDelete() and return the value that has been
+assigned to it. The program has 5 in 100 chance of deciding that the galaxy must be removed from
+the display surface.
+
+Implemented update() in HyperManager to have a 1 in 10 chance in calling update on galaxy and
+potentially removing it from the display surface.
+
+#######################
+Oct 30 - 12:46 AM - Yichen
+
+Added and implemented new method called createNewGalaxies(), which will randomly check and generate
+new galaxies in different positions across the screen.
+
+#######################
+Oct 30 - 6:40 PM - Yichen
+
+Added new activity, GameOverActivity, that appears after the game is finished, showing the player's
+score. Updated Game3Activity to accommodate a restricted game time, which runs on a separate thread.
+Updated HyperManager to store and return total score gained by the player. Updated Galaxy to
+randomly generate a score from 100 to 200 inclusive, which is the score gained by the player should
+they tap the galaxy.
+
+Renamed scratch.txt to TODO_LIST.txt.
+
+#######################
+Oct 30 - 6:42 PM - Yichen
+
+Added two new galaxy types, Blackhole and Wormhole. Blackhole will remove points from the total
+amount of points the player has gained, and Wormhole will give double the normal amount of points
+if tapped.
+
+#######################
+Oct 30 - 7:50 PM - Yichen
+
+Updated HyperManager so that it no longer creates new Galaxy objects, and outsourced it to the
+class GalaxyFactory. Updated HyperManager and HyperView to accommodate these changes.
+
+Added new pictures for galaxies. Updated random-generation of galaxies to include random picking of
+galaxy appearances, from a list of 5 potential appearances.
+
+#######################
+Oct 30 - 8:13 PM - Yichen
+
+Updated GalaxyFactory so that the galaxies will not spawn off-screen.
+
+#######################
+Oct 30 - 9:20 PM - Yichen
+
+Added javadocs to methods.
+
+#######################
+Oct 30 - 9:52 PM - Yichen
+
+Added InstructionActivity, which displays the game instructions before entering into the game.
+
+#######################
+Oct 30 - 11:12 PM - Yichen
+
+Added background to game.
+
+#######################
+Oct 31 - 12:45 AM - Rajvi
+
+Changed the background of the game.
+
+#########################
+Oct 31 - 1:10 AM - Rajvi
+
+Changed the instructions screen background.
+
+###########################
+Oct 31 - 1:13 AM - Rajvi
+
+Changed the game over screen background.
+
+###########################
+Oct 31 - 12:40 PM - Yichen
+
+Added timer and score to the HyperView, so that it shows the player how much time they have left
+and how much points they've amassed.
+
+###########################
+Oct 31 - 4:53 PM - Yichen
+
+Moved all relevant Game3 files to a separate package.
+
+###########################
+Oct 31 - 5:15 PM - Yichen
+
+Merged master branch with Game3 branch to prepare for merging with remote master branch. Updated
+button activity in GameListActivity to start Game3.
+
+###########################
+Oct 31 - 9:39 PM - Yichen
+
+Updated GalaxyFactory so that it now generates one of three types of galaxies: normal galaxy,
+wormhole, and a blackhole.
+
+###########################
+Nov 1 - 1:23 PM - Rajvi
+
+Deleted some repetitive code in InstructionActivity to make the window fullscreen. Also rearranged
+some code, so that upon exiting the app while playing game 3 and then returning, the app redirects
+the player back to InstructionActivity.

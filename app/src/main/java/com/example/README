@@ -1,0 +1,24 @@
+Play the game in order by clicking the "Next Game" button as instructed, starting with Game 1:
+Maze of Doom.
+
+The game should start up by simply clicking the run button.
+
+Whenever you make a new virtual device, sign up first!
+
+Collect artifacts for bonus points!
+In Maze of Doom they are white circles (aka "metal plating to build the spaceship")
+In Flappy Asteroids they are galaxies that you must observe and collect data from to find
+extraterrestrial planets!
+In Galactic Hyperjump, travel to new planets!
+
+INSTRUCTIONS FOR GAME 3: GALAXY HYPERJUMP:
+1. Level 1: Tap all galaxies except for the black hole (turquoise aura emanating from a dark centre)
+2. Level 2: Tap all galaxies that match the colour provided. Avoid black holes.
+3. Level 3: Tap all galaxies that match the colour provided. Colour will change throughout the game.
+
+Extra Note: Wormholes look just like black holes but with an aqua hue! Tapping wormholes will
+reduce a life but will give extra points! Black holes will simply reduce a life and points.
+
+Sources:
+- for game 1, we used recursive back-tracking algorithm to make a random maze.
+   https://en.wikipedia.org/wiki/Maze_generation_algorithm

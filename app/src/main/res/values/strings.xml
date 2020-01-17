@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Game</string>
+
+    <string name="title_activity_game2_manager">Game2Manager</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="title_activity_music_selector">MusicSelectorActivity</string>
+    <string name="title_activity_high_scores">HighScoresActivity</string>
+    <string name="resume_game1">Resume</string>
+</resources>

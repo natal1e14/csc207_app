@@ -1,0 +1,92 @@
+########################
+Oct 22 - 8:35 PM
+
+Added Player, PlayerManager, User class and wrote preliminary code for them.
+
+########################
+Oct 24 - 11:06 PM
+Created LevelManager abstract class - Nat
+
+#########################
+Oct 26 - 10:51 AM
+Deleted & Recreated LevelManager as an Activity (so that it extends AppCompatActivity)
+
+#########################
+Oct 2 - 11:01 AM
+Added a default constructor to LevelManager - Nat
+
+#########################
+Oct 26 - 1:58 PM - Yichen
+Added attrs.xml that was missing from master and Game3 branches.
+
+#########################
+Oct 28 - 8:17 PM - Yichen
+Deleted all files from Game3 that was accidentally pushed into remote master branch.
+
+Added LoginActivity and RegisterActivity, which will accommodate the signing-in of the user.
+
+GameListActivity is a temporary activity that will allow for the presentation of the three games.
+
+You do not have to enter anything into the Login or Sign-Up activities to be able to access the
+GameListActivity.
+
+Updated AndroidManifest.xml to accommodate new MainActivity functions, which are the screens
+that should appear at the beginning of the game.
+
+#########################
+Oct 31 - 8:17 PM - Yichen
+
+Added ShowScoreActivity that will show the statistics for each of the games.
+
+#########################
+Oct 31 - 8:17 PM - Yichen
+
+Small UI changes.
+
+#########################
+Nov 1 - 11:18 AM - Yichen
+
+Added a simple ScoreManager that will store the score of the most recent session from each game.
+
+#########################
+Nov 1 - 11:24 AM - Yichen
+
+Added option to play all three games at once, by adding connections from each game's
+GameOverActivity
+
+#########################
+Nov 1 - 11:30 AM - Yichen
+
+Refactored GameOver activity so that it has the same naming scheme.
+
+#########################
+Nov 1 - 11:48 AM - Yichen
+
+Added javadocs to all classes under com.example.game
+
+#########################
+Nov 1 - 11:58 AM - Yichen
+
+Added javadocs to all classes under com.example.game1
+
+#########################
+Nov 1 - 12:17 PM - Yichen
+
+Added javadocs to all classes under com.example.game2
+
+#########################
+Nov 1 - 12:24 PM - Yichen
+
+Added javadocs to all classes under com.example.game3
+
+#########################
+Nov 1 - 11:30 - Elena Wang
+
+Added Lives to Score screen. Let Game 2 get lives left and change static total lives value.
+Now the Final Scores screen shows lives left. ScoreManager now tracks total lives across games
+1, 2 and 3.
+
+#########################
+Nov 26 - 8:06 PM - Elena Wang
+
+Added an abstract artifact class, because each game will implement artifact differently.

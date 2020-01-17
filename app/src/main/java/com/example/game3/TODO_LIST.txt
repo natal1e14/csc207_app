@@ -1,0 +1,40 @@
+STEPS TO IMPLEMENT RANDOM GENERATION OF GALAXIES:
+
+1. figure out where the draw method should be called (Manager) DONE
+
+2. roughly implement manager DONE
+
+Intermittent Step: Implement the methods and properties needed in Galaxy:
+    - getWidth
+    - getHeight
+    - validity boolean (checks if it should be on the screen or not: 2 factors: pressed and time)
+DONE DONE DONE DONE
+
+Intermittent Step #2: Implement the empty methods in HyperManager
+    - createGalaxies
+    - draw
+    - update
+DONE, DONE, DONE
+
+Intermittent Step #: Implement onTouch for Galaxy with new implementation:
+    - create and implement withinBounds
+    - implement onTouch in HyperView
+DONE, DONE
+
+Intermittent Step # 4: Create Galaxy subclasses:
+    - Galaxy (Regular)
+    - WormHole
+    - BlackHole
+DONE DONE DONE
+
+
+3. use random generation to randomly generate galaxies at different times DONE
+
+4. figure out how to add a timer to each galaxy DONE
+
+5. Add backgrounds:
+        - game
+        - instructions page
+        - game over
+DONE DONE DONE
+
