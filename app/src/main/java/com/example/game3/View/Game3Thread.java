@@ -19,7 +19,7 @@ public class Game3Thread extends Thread {
     private HyperView gameView;
 
     /**
-     * The status of the thread, if it is running or not.
+     * The status of the thread, checks if it's running or not.
      * **/
     private boolean running;
 
